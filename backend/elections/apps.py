@@ -1,0 +1,9 @@
+from django.apps import AppConfig
+
+
+class ElectionsConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'backend.elections'
+    
+    def ready(self):
+        import backend.elections.signals  # noqa
